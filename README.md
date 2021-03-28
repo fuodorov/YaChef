@@ -39,4 +39,4 @@ I set myself the goal of showing my programming skin
 - [x] Templates
 - [x] API
 - [x] Tests post
-- [x] Heroku
+- [x] ngrok
