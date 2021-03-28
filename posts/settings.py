@@ -1,4 +1,5 @@
 LETTERS_PER_STR = 15
+POSTS_PER_PAGE = 12
 
 # Group model settings
 GROUP_TITLE_VERBOUSE_NAME = 'Название группы: '
@@ -44,8 +45,7 @@ COMMENT_TEXT_HELP_TEXT = 'Текст комментария.'
 
 COMMENT_CREATED_VERBOUSE_NAME = 'Дата комментария:'
 
-
-#Follow model settings
+# Follow model settings
 FOLLOW_USER_RELATED_NAME = 'follower'
 FOLLOW_USER_VERBOUSE_NAME = 'Подписчик: '
 FOLLOW_USER_HELP_TEXT = 'Подписчик.'
@@ -54,3 +54,6 @@ FOLLOW_AUTHOR_RELATED_NAME = 'following'
 FOLLOW_AUTHOR_VERBOUSE_NAME = 'Автор: '
 FOLLOW_AUTHOR_HELP_TEXT = 'Автор.'
 
+# Form settings
+POST_FORM_FIELDS = ('text', 'group', 'image')
+POST_COMMENT_FIELDS = ('text',)
