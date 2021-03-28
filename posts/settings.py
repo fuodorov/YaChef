@@ -14,7 +14,7 @@ GROUP_DESCRIPTION_VERBOUSE_NAME = 'Информация об авторе: '
 GROUP_DESCRIPTION_HELP_TEXT = 'Напишите что-нибудь об авторе.'
 
 # Post model settings
-POST_TEXT_VERBOUSE_NAME = 'Пользовательский рецепт: '
+POST_TEXT_VERBOUSE_NAME = 'Рецепт: '
 POST_TEXT_HELP_TEXT = 'Напишите здесь текст рецепта.'
 
 POST_PUB_DATE_VERBOUSE_NAME = 'date published'

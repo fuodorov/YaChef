@@ -18,7 +18,7 @@ class Group(models.Model):
 
 
 class Post(models.Model):
-    text = models.TextField(POST_TEXT_VERBOUSE_NAME, help_text=POST_TEXT_VERBOUSE_NAME)
+    text = models.TextField(POST_TEXT_VERBOUSE_NAME, help_text=POST_TEXT_HELP_TEXT)
     pub_date = models.DateTimeField(POST_PUB_DATE_VERBOUSE_NAME, auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name=POST_RELATED_NAME,
                                verbose_name=POST_AUTHOR_VERBOUSE_NAME, help_text=POST_AUTHOR_HELP_TEXT)
