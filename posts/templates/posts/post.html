@@ -1,0 +1,27 @@
+{% extends "include/base.html" %}
+{% block title %} {{ post.title }} | YaChef{% endblock %}
+{% block header %} {{ post.title }} {% endblock %}
+
+{% block content %}
+<main role="main" class="container">
+  <div class="row">
+    {% include 'posts/include/author_card.html' %}
+    <div class="col-md-9">
+      {% include 'posts/include/post_item.html' with post=post %}
+      {% for item in comments %}
+  <div class="media card mb-4">
+    <div class="media-body card-body">
+      <h5 class="mt-0">
+        <a href="{% url 'profile' item.author.username %}" name="comment_{{ item.id }}">
+          @{{ item.author.username }}
+        </a>
+      </h5>
+      <p>{{ item.text | linebreaksbr }}</p>
+      <small class="text-muted">{{ item.created|date:"d M Y г. H:i" }}</small>
+    </div>
+  </div>
+{% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}
