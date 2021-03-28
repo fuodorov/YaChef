@@ -22,6 +22,7 @@ INTERNAL_IPS = [
 SITE_ID = 1
 
 INSTALLED_APPS = [
+    "api",
     "users",
     "posts",
     "about",
@@ -34,6 +35,8 @@ INSTALLED_APPS = [
     "django.contrib.flatpages",
     "django.contrib.sites",
     "sorl.thumbnail",
+    "rest_framework",
+    "django_filters",
     #"debug_toolbar",
 ]
 
@@ -119,3 +122,12 @@ LOGOUT_REDIRECT_URL = "index"
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend'
+    ]
+}
