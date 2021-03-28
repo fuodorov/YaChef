@@ -2,6 +2,7 @@ from django.contrib.admin import ModelAdmin, register
 
 from .models import Comment, Follow, Group, Post
 
+
 @register(Post)
 class PostAdmin(ModelAdmin):
     list_display = ('pk', 'text', 'pub_date', 'author', 'group', 'image')

@@ -8,13 +8,11 @@ from .settings import POSTS_PER_PAGE
 
 
 def is_user_subscribed(user, author):
-    return (user != author and user.is_authenticated and
-            Follow.objects.filter(user=user, author=author).exists())
+    return user != author and user.is_authenticated and Follow.objects.filter(user=user, author=author).exists()
 
 
 def is_authenticated_user_not_subscribed(user, author):
-    return (user != author and not
-            Follow.objects.filter(user=user, author=author).exists())
+    return user != author and not Follow.objects.filter(user=user, author=author).exists()
 
 
 def index(request):

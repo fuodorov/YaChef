@@ -25,7 +25,7 @@ class Post(models.Model):
     group = models.ForeignKey(Group, on_delete=models.SET_NULL, blank=True, null=True, related_name=POST_RELATED_NAME,
                               verbose_name=POST_GROUP_VERBOUSE_NAME, help_text=POST_GROUP_HELP_TEXT )
     image = models.ImageField(upload_to=POST_IMAGE_UPLOAD_TO, blank=True, null=True,
-                              verbose_name=POST_IMAGE_UPLOAD_TO, help_text=POST_IMAGE_HELP_TEXT)
+                              verbose_name=POST_IMAGE_VERBOUSE_NAME, help_text=POST_IMAGE_HELP_TEXT)
 
     class Meta:
         ordering = ('-pub_date', )
