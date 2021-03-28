@@ -56,4 +56,4 @@ class Follow(models.Model):
                                verbose_name=FOLLOW_AUTHOR_VERBOUSE_NAME, help_text=FOLLOW_AUTHOR_HELP_TEXT)
 
     class Meta:
-        constraints = [models.UniqueConstraint(fields=('user', 'author'), name='follow_pair')]
+        constraints = (models.UniqueConstraint(fields=('user', 'author'), name='follow_pair'),)
