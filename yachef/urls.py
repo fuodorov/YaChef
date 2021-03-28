@@ -4,20 +4,20 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-handler404 = "posts.views.page_404"  # noqa
-handler500 = "posts.views.page_500"  # noqa
+handler404 = 'posts.views.page_404'  # noqa
+handler500 = 'posts.views.page_500'  # noqa
 
 urlpatterns = [
-    path("", include("posts.urls")),
-    path("auth/", include("users.urls")),
-    path("auth/", include("django.contrib.auth.urls")),
-    path("admin/", admin.site.urls),
-    path("about/", include("about.urls", namespace="about")),
+    path('', include('posts.urls')),
+    path('auth/', include('users.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
+    path('admin/', admin.site.urls),
+    path('about/', include('about.urls', namespace='about')),
 ]
 
 if settings.DEBUG:
     import debug_toolbar
-    urlpatterns += (path("__debug__/", include(debug_toolbar.urls)),)
+    urlpatterns += (path('__debug__/', include(debug_toolbar.urls)),)
     urlpatterns += static(
         settings.MEDIA_URL,
         document_root=settings.MEDIA_ROOT
